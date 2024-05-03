@@ -1,0 +1,2 @@
+# GoGoRookie
+Go rookie way.
