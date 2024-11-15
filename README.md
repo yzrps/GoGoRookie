@@ -8,3 +8,7 @@ git add .
 git commit -m "注释信息"
 git push origin master
 ```
+######  vscode工具是一个奇妙的工具，它可以帮助我尽快地适应这个异空间，但它也总有一点自作聪明，向我提出各种建议。当然，这些建议只出现在我的视网膜中，由我的大脑决定是否采用。接下来，我使用了第二个咒语，在创造这个世界的同时，创造了另外一个镜像世界，这两个世界的差别在于：墙。墙是我所处的真实世界的一个保护罩，虽然意识可以随意穿越，但肉体受到其强大的保护。
+```  git咒语：
+git remote set-url --add origin https://gitee.com/yzrps/GoGoRookie.git
+```
