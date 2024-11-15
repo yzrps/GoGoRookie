@@ -1,0 +1,29 @@
+/* 自动检测窗口大小 */
+@property --vw {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vw;
+}
+
+@property --vh {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vh;
+}
+
+:root {
+    --w: tan(atan2(var(--vw), 1px));
+    --h: tan(atan2(var(--vh), 1px));
+}
+
+body::before {
+    content: counter(w) "x" counter(h);
+    counter-reset: w var(--w) h var(--h);
+    font-size: 150px;
+    font-weight: 900;
+    position: fixed;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}

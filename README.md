@@ -12,3 +12,38 @@ git push origin master
 ```  git咒语：
 git remote set-url --add origin https://gitee.com/yzrps/GoGoRookie.git
 ```
+
+#### 建造html小屋(1)
+
+######  在穿越到异空间后，我决定先搭建一个简单的html小屋，给这个世界增加一点色彩和元素。很久以前，我有过一个师傅，他最喜欢凭空造物，现在我决定试试他的魔法，凭空造出一个小屋来。这个小屋子的第一个能力是：可以使用css咒语检测自己的大小。
+```
+css咒语：
+@property --vw {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vw;
+}
+
+@property --vh {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vh;
+}
+
+:root {
+    --w: tan(atan2(var(--vw), 1px));
+    --h: tan(atan2(var(--vh), 1px));
+}
+
+body::before {
+    content: counter(w) "x" counter(h);
+    counter-reset: w var(--w) h var(--h);
+    font-size: 150px;
+    font-weight: 900;
+    position: fixed;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+```
